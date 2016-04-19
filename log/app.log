@@ -1,0 +1,87 @@
+*** WARNING *** The program 'node' uses the Apple Bonjour compatibility layer of Avahi.
+*** WARNING *** Please fix your application to use the native API of Avahi!
+*** WARNING *** For more information see <http://0pointer.de/avahi-compat?s=libdns_sd&e=node>
+*** WARNING *** The program 'node' called 'DNSServiceRegister()' which is not supported (or only supported partially) in the Apple Bonjour compatibility layer of Avahi.
+*** WARNING *** Please fix your application to use the native API of Avahi!
+*** WARNING *** For more information see <http://0pointer.de/avahi-compat?s=libdns_sd&e=node&f=DNSServiceRegister>
+HAP-NodeJS starting...
+Parsing accessory: Fan_accessory.js
+Parsing accessory: GarageDoorOpener_accessory.js
+Parsing accessory: Light_accessory.js
+Parsing accessory: Lock_accessory.js
+Parsing accessory: TemperatureSensor_accessory.js
+Parsing accessory: Thermostat_accessory.js
+Change: false
+Off Success
+Change: true
+On Success
+Change: false
+Off Success
+Change: true
+On Success
+Change: 100
+executed accessory: Test Accessory 1, and characteristic: Light - Saturation, with value: 100.
+Change: 100
+executed accessory: Test Accessory 1, and characteristic: Light - Brightness, with value: 100.
+Change: 0
+ff0000
+results: ["hci0:\tType: BR/EDR  Bus: USB","\tBD Address: 5C:F3:70:67:1C:D0  ACL MTU: 1021:8  SCO MTU: 64:1","\tUP RUNNING ","\tRX bytes:1508 acl:0 sco:0 events:101 errors:0","\tTX bytes:2068 acl:4 sco:0 commands:85 errors:0","","0"]
+Change: true
+On Success
+Change: false
+Off Success
+Change: false
+Off Success
+Change: false
+Off Success
+Change: true
+On Success
+Change: false
+Off Success
+Change: true
+On Success
+Change: true
+On Success
+Change: false
+Off Success
+Change: 0
+ff0000
+Change: 100
+executed accessory: Test Accessory 1, and characteristic: Light - Saturation, with value: 100.
+Change: 100
+executed accessory: Test Accessory 1, and characteristic: Light - Brightness, with value: 100.
+results: ["hci0:\tType: BR/EDR  Bus: USB","\tBD Address: 5C:F3:70:67:1C:D0  ACL MTU: 1021:8  SCO MTU: 64:1","\tUP RUNNING ","\tRX bytes:2168 acl:0 sco:0 events:171 errors:0","\tTX bytes:2608 acl:14 sco:0 commands:115 errors:0","","0"]
+Change: 195
+00bfff
+Change: 25
+executed accessory: Test Accessory 1, and characteristic: Light - Saturation, with value: 25.
+Change: 90
+executed accessory: Test Accessory 1, and characteristic: Light - Brightness, with value: 90.
+results: ["hci0:\tType: BR/EDR  Bus: USB","\tBD Address: 5C:F3:70:67:1C:D0  ACL MTU: 1021:8  SCO MTU: 64:1","\tUP RUNNING ","\tRX bytes:2234 acl:0 sco:0 events:178 errors:0","\tTX bytes:2662 acl:15 sco:0 commands:118 errors:0","","0"]
+Change: 240
+0000ff
+Change: 100
+executed accessory: Test Accessory 1, and characteristic: Light - Saturation, with value: 100.
+Change: 54
+executed accessory: Test Accessory 1, and characteristic: Light - Brightness, with value: 54.
+results: ["hci0:\tType: BR/EDR  Bus: USB","\tBD Address: 5C:F3:70:67:1C:D0  ACL MTU: 1021:8  SCO MTU: 64:1","\tUP RUNNING ","\tRX bytes:2300 acl:0 sco:0 events:185 errors:0","\tTX bytes:2716 acl:16 sco:0 commands:121 errors:0","","0"]
+Change: 195
+00bfff
+Change: 25
+executed accessory: Test Accessory 1, and characteristic: Light - Saturation, with value: 25.
+Change: 90
+executed accessory: Test Accessory 1, and characteristic: Light - Brightness, with value: 90.
+results: ["hci0:\tType: BR/EDR  Bus: USB","\tBD Address: 5C:F3:70:67:1C:D0  ACL MTU: 1021:8  SCO MTU: 64:1","\tUP RUNNING ","\tRX bytes:2366 acl:0 sco:0 events:192 errors:0","\tTX bytes:2770 acl:17 sco:0 commands:124 errors:0","","0"]
+Change: true
+On Success
+Change: 0
+ff0000
+Change: 100
+executed accessory: Test Accessory 1, and characteristic: Light - Saturation, with value: 100.
+Change: 100
+executed accessory: Test Accessory 1, and characteristic: Light - Brightness, with value: 100.
+results: ["hci0:\tType: BR/EDR  Bus: USB","\tBD Address: 5C:F3:70:67:1C:D0  ACL MTU: 1021:8  SCO MTU: 64:1","\tUP RUNNING ","\tRX bytes:2498 acl:0 sco:0 events:206 errors:0","\tTX bytes:2878 acl:19 sco:0 commands:130 errors:0","","0"]
+Change: false
+Off Success
+Change: false
+Off Success

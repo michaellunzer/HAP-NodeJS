@@ -2,14 +2,26 @@ var PythonShell = require('python-shell');
 // HomeKit types required
 var types = require("./types.js")
 var exports = module.exports = {};
-
-var conversions = require('color-conversions');
+var fs = require('fs');
 
 var execute = function(accessory,characteristic,value){ console.log("executed accessory: " + accessory + ", and characteristic: " + characteristic + ", with value: " +  value + "."); }
 
+var changeHue = function(){
+	console.log('it works ');
+
+	// var fs = require('fs');
+	// fs.writeFile('hue.txt', value, function(err) {
+	// 	if(err) {
+	// 		return console.log(err);
+	// 	}
+	// console.log('The file was saved!');
+	// }); 
+}
+
+
 exports.accessory = {
   displayName: "Bedroom Light",
-  username: "1A:3B:3C:4D:1E:FF",
+  username: "1A:2B:3C:4D:1E:FF",
   pincode: "031-45-154",
   services: [{
     sType: types.ACCESSORY_INFORMATION_STYPE, 
@@ -101,50 +113,7 @@ exports.accessory = {
 		designedMaxLength: 1    
     },{
     	cType: types.HUE_CTYPE,
-    	
-		onUpdate: function(value)
-	{ 
-    		console.log("Change:",value);
-
-    		var convertedHexValue
-    		convertedHexValue = String(conversions.hsv2hex(value, 100, 100));
-    		console.log(convertedHexValue); 
-
-
-    		var options = {
-			  mode: 'text',
-			  args: [convertedHexValue]
-			};
-
-			PythonShell.run('/python/lightColor.py', options, function (err, results) {
-			  if (err) throw err;
-			  // results is an array consisting of messages collected during execution
-			  console.log('results: %j', results);
-			});
-
-			
-    		
-
-    		//create variable to combine PythonShell.run command with Hex Value
-
-    		// var pythonPathString 
-    		// pythonPathString = ('lightColor.py ',  + String(convertedHexValue));
-    		// console.log(pythonPathString);
-    		
-
-   //  		if (value < 361) {
-			// PythonShell.run(pythonPathString, function (err) {
- 		// 		console.log('color is ' + convertedHexValue);
-			// });
-   //  		} 
-   //  		else {
-   //  		// 	//PythonShell.run('/python/light0.py', function (err) {
-   //  				console.log("pass");
-    				
-   //  		}
-    	},
-
-
+    	onUpdate: function(value) { console.log("Change:",value); execute("Test Accessory 1", "Light - Hue", value); changeHue(); },
     	perms: ["pw","pr","ev"],
 		format: "int",
 		initialValue: 0,
@@ -184,3 +153,4 @@ exports.accessory = {
     }]
   }]
 }
+
