@@ -1,5 +1,10 @@
 HAP-NodeJS
 ==========
+This is what is running on my first generation Raspberry Pi (256mb RAM). It is really rock solid. I don't have to restart the node.js server ever. Also I am running a free app on my iPhone called Nanoleaf. This allows you to set up the house / rooms / scenes so Siri can understand your commands.
+
+My contribuition to this project is the ability to control a bluetooth lightbulb. This is done by interpreting the color that is passes from your Voice "Siri, make my lights red" converting the Red color request to HSV. From there it gets converted from HSV to HEX and passed along to a python script which connects to the bluetooth bulb and sends the color command like this: #RRGGBB. Red would be #FF0000.
+
+---
 
 HAP-NodeJS is a Node.js implementation of HomeKit Accessory Server.
 
@@ -47,6 +52,10 @@ See each of the corresponding class files for more explanation and notes.
 
 Notes
 =====
+
+Please make sure you have color-converions installed: 
+`npm i color-conversions`
+https://www.npmjs.com/package/color-conversions
 
 Special thanks to [Alex Skalozub](https://twitter.com/pieceofsummer), who reverse engineered the server side HAP. ~~You can find his research at [here](https://gist.github.com/pieceofsummer/13272bf76ac1d6b58a30).~~ (Sadly, on Nov 4, Apple sent the [DMCA](https://github.com/github/dmca/blob/master/2014-11-04-Apple.md) request to Github to remove the research.)
 
