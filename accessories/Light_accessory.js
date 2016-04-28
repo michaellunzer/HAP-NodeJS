@@ -5,6 +5,8 @@ var exports = module.exports = {};
 
 var conversions = require('color-conversions');
 
+var alpha_hex = require('alpha-to-hex');
+
 var execute = function(accessory,characteristic,value){ console.log("executed accessory: " + accessory + ", and characteristic: " + characteristic + ", with value: " +  value + "."); }
 
 exports.accessory = {
@@ -158,6 +160,40 @@ exports.accessory = {
     },{
     	cType: types.BRIGHTNESS_CTYPE,
     	onUpdate: function(value) { console.log("Change:",value); execute("Test Accessory 1", "Light - Brightness", value); },
+    	
+
+//Everything commented out below should be uncommented to enable dimming. It crashes, so use caution.
+
+	// 	onUpdate: function(value)
+	// {
+ //    		console.log("Change:",value);
+ //    		//console.log("StaticValue:",alpha_hex.convert("12"));
+
+ //    		var valueString = value.toString();
+
+ //    		//console.log("StaticValue:",alpha_hex.convert(valueString));
+
+	// 		var convertedHexValue2
+	// 		convertedHexValue2 = alpha_hex.convert(valueString);
+	// 		var convertedHexValue2String = String(convertedHexValue2);
+	// 		console.log("convertedHexValue2String:",convertedHexValue2String.substring(1));
+
+ //    		// var convertedHexValue2
+ //    		// convertedHexValue2 = alpha_hex.convert(String(value));
+ //    		// console.log("ConvertedHexValue:",convertedHexValue2.substring(1)); 
+
+ //    		var options = {
+	// 		  mode: 'text',
+	// 		  args: [convertedHexValue2String.substring(1)] 
+	// 		};
+
+	// 		PythonShell.run('/python/lightDim.py', options, function (err, results) {
+	// 		  if (err) throw err;
+	// 		  // results is an array consisting of messages collected during execution
+	// 		  console.log('results: %j', results);
+	// 		});
+	// 		},
+
     	perms: ["pw","pr","ev"],
 		format: "int",
 		initialValue: 0,
