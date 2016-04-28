@@ -123,27 +123,6 @@ exports.accessory = {
 			  // results is an array consisting of messages collected during execution
 			  console.log('results: %j', results);
 			});
-
-			
-    		
-
-    		//create variable to combine PythonShell.run command with Hex Value
-
-    		// var pythonPathString 
-    		// pythonPathString = ('lightColor.py ',  + String(convertedHexValue));
-    		// console.log(pythonPathString);
-    		
-
-   //  		if (value < 361) {
-			// PythonShell.run(pythonPathString, function (err) {
- 		// 		console.log('color is ' + convertedHexValue);
-			// });
-   //  		} 
-   //  		else {
-   //  		// 	//PythonShell.run('/python/light0.py', function (err) {
-   //  				console.log("pass");
-    				
-   //  		}
     	},
 
 
@@ -159,40 +138,40 @@ exports.accessory = {
 		unit: "arcdegrees"
     },{
     	cType: types.BRIGHTNESS_CTYPE,
-    	onUpdate: function(value) { console.log("Change:",value); execute("Test Accessory 1", "Light - Brightness", value); },
+    	//onUpdate: function(value) { console.log("Change:",value); execute("Test Accessory 1", "Light - Brightness", value); },
     	
 
-//Everything commented out below should be uncommented to enable dimming. It crashes, so use caution.
+// Everything commented out below should be uncommented to enable dimming. It crashes randomly, so use caution.
 
-	// 	onUpdate: function(value)
-	// {
- //    		console.log("Change:",value);
- //    		//console.log("StaticValue:",alpha_hex.convert("12"));
+		onUpdate: function(value)
+	{
+     		console.log("Change:",value);
+     		//console.log("StaticValue:",alpha_hex.convert("12"));
 
- //    		var valueString = value.toString();
+     		var valueString = value.toString();
 
- //    		//console.log("StaticValue:",alpha_hex.convert(valueString));
+     		//console.log("StaticValue:",alpha_hex.convert(valueString));
 
-	// 		var convertedHexValue2
-	// 		convertedHexValue2 = alpha_hex.convert(valueString);
-	// 		var convertedHexValue2String = String(convertedHexValue2);
-	// 		console.log("convertedHexValue2String:",convertedHexValue2String.substring(1));
+			var convertedHexValue2
+			convertedHexValue2 = alpha_hex.convert(valueString);
+			var convertedHexValue2String = String(convertedHexValue2);
+			console.log("convertedHexValue2String:",convertedHexValue2String.substring(1));
 
- //    		// var convertedHexValue2
- //    		// convertedHexValue2 = alpha_hex.convert(String(value));
- //    		// console.log("ConvertedHexValue:",convertedHexValue2.substring(1)); 
+     		// var convertedHexValue2
+     		// convertedHexValue2 = alpha_hex.convert(String(value));
+     		// console.log("ConvertedHexValue:",convertedHexValue2.substring(1)); 
 
- //    		var options = {
-	// 		  mode: 'text',
-	// 		  args: [convertedHexValue2String.substring(1)] 
-	// 		};
+     		var options = {
+			  mode: 'text',
+			  args: [convertedHexValue2String.substring(1)] 
+			};
 
-	// 		PythonShell.run('/python/lightDim.py', options, function (err, results) {
-	// 		  if (err) throw err;
-	// 		  // results is an array consisting of messages collected during execution
-	// 		  console.log('results: %j', results);
-	// 		});
-	// 		},
+			PythonShell.run('/python/lightDim.py', options, function (err, results) {
+			  if (err) throw err;
+			  // results is an array consisting of messages collected during execution
+			  console.log('results: %j', results);
+			});
+			},
 
     	perms: ["pw","pr","ev"],
 		format: "int",
